@@ -12,8 +12,9 @@ services:
       MODRINTH_MODPACK: "/data/modpack.mrpack"
 
       VERSION: "1.21.1"
-
       MEMORY: "10G"
+      USE_AIKAR_FLAGS: "TRUE"
+      MAX_TICK_TIME: "-1"
 
     volumes:
       - ./data:/data
