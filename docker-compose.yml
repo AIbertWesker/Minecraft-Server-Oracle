@@ -1,0 +1,20 @@
+services:
+  minecraft:
+    image: itzg/minecraft-server:latest
+    container_name: minecraft_mody
+    ports:
+      - "25565:25565"
+    environment:
+      EULA: "TRUE"
+      ONLINE_MODE: "TRUE"
+
+      TYPE: "MODRINTH"
+      MODRINTH_MODPACK: "/data/modpack.mrpack"
+
+      VERSION: "1.21.1"
+
+      MEMORY: "10G"
+
+    volumes:
+      - ./data:/data
+    restart: unless-stopped
